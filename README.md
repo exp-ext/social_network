@@ -27,6 +27,7 @@
 
 Create a simple RESTful API using FastAPI for a social networking application
 
+
 ## Functional requirements:
 
 - There should be some form of authentication and registration (JWT, Oauth, Oauth 2.0, etc..)
@@ -38,6 +39,7 @@ Create a simple RESTful API using FastAPI for a social networking application
 
 ## Requirements
 
+```
 fastapi==0.100.0
 fastapi-users==12.0.0
 fastapi-cache2==0.2.1
@@ -49,6 +51,25 @@ redis==4.6.0
 
 pytest==7.4.0
 pytest-asyncio==0.21.0
+```
+
+
+## Project Organization
+
+- The project runs in Docker containers whose image is pushed in DockerHub.
+
+### To run the project:
+
+- Clone the repository to the local computer;
+- Create the /infra/.env file. The template to populate the file is in /infra/.env.example;
+- In the infra folder, run the `docker compose up -d --build` command;
+
+
+## API Documentation
+
+```
+http://localhost:8000/docs
+```
 
 
 <hr />
