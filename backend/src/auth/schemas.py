@@ -34,7 +34,7 @@ class UserCreate(schemas.BaseUserCreate):
     is_verified: bool = False
 
     @validator('password')
-    def validate_password(self, password: str):
+    def validate_password(password: str):
         simple_passwords = ['password', '123456', 'qwerty', 'admin']
         if password.lower() in simple_passwords:
             raise HTTPException(

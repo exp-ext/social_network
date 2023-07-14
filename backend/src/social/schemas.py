@@ -8,7 +8,7 @@ class PostCreate(BaseModel):
     slug: str
 
     @root_validator(pre=True)
-    def generate_slug(self, values):
+    def generate_slug(values):
         if 'title' in values:
             values['slug'] = slugify(values.get("title"))
         return values
